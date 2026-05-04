@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "./portal-parity.css";
+
+/*
+ * Tailwind v4 layers can win over the unlayered portal CSS import.
+ * Re-assert the original zip glass panel fill (oklch via --panel) on every major card.
+ */
+@layer components {
+  section.hero.glass,
+  section.howto.glass,
+  section.holders.glass,
+  section.check-address.glass,
+  .stats > .stat.glass {
+    background: var(--panel);
+  }
+}
